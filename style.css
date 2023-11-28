@@ -68,6 +68,7 @@ body{
     padding: 5px;
     border-radius: 3px;
     font-size: 0.8em;
+    margin-top: 10px;
 }
 
 .delete-comment{
