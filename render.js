@@ -8,13 +8,16 @@ const Renderer = function(){
         posts.forEach(function(post,idx){
             postsView.append(`<div class="post" data-id="${post.id}" >
                 ${post.text}
+                <div class="comments"></div>
             </div>`)
             
             const postElement = $(`[data-id=${post.id}]`)
+            const comments = postElement.find('.comments')
+
             post.comments.forEach(comment=>{
-                postElement.append(`<div class="comments" data-id="${comment.id}">
-                <span class="delete-comment">X</span>
-                <span >${comment.text}</span>
+                comments.append(`<div class="comment" data-id="${comment.id}">
+                    <span class="delete-comment">X</span>
+                    <span >${comment.text}</span>
                 </div>`)
             })
 

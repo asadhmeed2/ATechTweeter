@@ -29,12 +29,18 @@ posts.on('click','.delete', function(){
 posts.on('click','.commentBtn', function(){
     const postId = $(this).closest('.post').data().id;
     const text = $(this).closest('.post').find('.commentIpt').val();
-
+    
     if(!text){
         return
     }
-
+    
     tweeter.addComment(text,postId);
     renderPosts();
 })
 
+posts.on('click','.delete-comment', function(){
+    const postID = $(this).closest('.post').data().id;
+    const commentID = $(this).closest('.comment').data().id;
+    tweeter.removeComment(commentID,postID);
+    renderPosts();
+})
