@@ -1,10 +1,3 @@
-// function CommentsModule(){
-//     let _comments=[]
-    
-//     function addCommentOnTwit(comment){ //{comment:string , twitId:string, id:string}
-//         _comments.push(comment)
-//     }
-// }
 
 function TweeterModule(){
     let _posts =[
